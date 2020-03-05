@@ -107,6 +107,7 @@ run apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y liblzma-
 
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 ENV PATH=/root/.cargo/bin:$PATH
+RUN cargo install --force cbindgen
 
 USER root
 
